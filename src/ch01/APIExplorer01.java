@@ -25,18 +25,23 @@ public class APIExplorer01 {
 																														 * Key
 																														 */
 		// "&" : 쿼리(요청)할 문자열의 값
-		urlBuilder
-				.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /* 페이지번호 */
-		urlBuilder.append(
-				"&" + URLEncoder.encode("numOfRows", "UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /* 한 페이지 결과 수 */
-		urlBuilder.append("&" + URLEncoder.encode("resultType", "UTF-8") + "="
-				+ URLEncoder.encode("json", "UTF-8")); /* 결과형식(xml/json) */
-		urlBuilder.append("&" + URLEncoder.encode("basDt", "UTF-8") + "="
-				+ URLEncoder.encode("", "UTF-8")); /* 작업 또는 거래의 기준이 되는 일자(년월일) */
+		urlBuilder.append("&" + URLEncoder.encode("pageNo", "UTF-8")
+				+ "=" + URLEncoder.encode("1", "UTF-8")); /* 페이지번호 */
+		
+		urlBuilder.append("&" + URLEncoder.encode("numOfRows", "UTF-8")
+				+ "=" + URLEncoder.encode("1", "UTF-8")); /* 한 페이지 결과 수 */
+		
+		urlBuilder.append("&" + URLEncoder.encode("resultType", "UTF-8")
+				+ "=" + URLEncoder.encode("json", "UTF-8")); /* 결과형식(xml/json) */
+		
+		urlBuilder.append("&" + URLEncoder.encode("basDt", "UTF-8")
+				+ "=" + URLEncoder.encode("", "UTF-8")); /* 작업 또는 거래의 기준이 되는 일자(년월일) */
+		
 //		urlBuilder.append("&" + URLEncoder.encode("crno", "UTF-8") + "="
 //				+ URLEncoder.encode("", "UTF-8")); /* 법인등록번호 */
-		urlBuilder.append("&" + URLEncoder.encode("stckIssuCmpyNm", "UTF-8") + "="
-				+ URLEncoder.encode("삼성전자", "UTF-8")); /* 주식발행사의 명칭 */
+		
+		urlBuilder.append("&" + URLEncoder.encode("stckIssuCmpyNm", "UTF-8")
+				+ "=" + URLEncoder.encode("현대에너지솔루션", "UTF-8")); /* 주식발행사의 명칭 */
 
 		URL url = new URL(urlBuilder.toString());
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
